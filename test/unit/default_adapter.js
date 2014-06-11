@@ -34,10 +34,10 @@ tests = {
 
     model.defaultAdapter = memoryAdapter;
     model.Zooby.adapter = filesystemAdapter;
-
-    assert.equal(model.getAdapterForModel('User'), memoryAdapter);
-    assert.equal(model.getAdapterForModel('Wooby'), memoryAdapter);
-    assert.equal(model.getAdapterForModel('Zooby'), filesystemAdapter);
+    console.log(model.User);
+    assert.equal(model.User.getAdapter(), memoryAdapter);
+    assert.equal(model.Wooby.getAdapter(), memoryAdapter);
+    assert.equal(model.Zooby.getAdapter(), filesystemAdapter);
   }
 };
 
